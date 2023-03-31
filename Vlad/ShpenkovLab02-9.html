@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Lab 01-9 by Shpenkov </title>
+	<meta name="description" content="Про себе та моє хобі">
+	<style>
+		body {
+		background-color: #f2f2f2;
+		font-family: Arial, sans-serif;
+		color: #333;
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 20px;
+		line-height: 1.5;
+		text-align: justify;
+	}
+
+		h1, h2 {
+			text-align: center;
+			font-weight: bold;
+			margin-top: 40px;
+			margin-bottom: 20px;
+			color: #333;
+		}
+
+		em {
+			font-style: italic;
+		}
+
+		strong {
+			font-weight: bold;
+		}
+
+		u {
+			text-decoration: underline;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Про себе</h1>
+      <button onclick="zoomIn()">Збільшити</button>
+    <button onclick="zoomOut()">Зменшити</button>
+    <img id="myImage" src="photo_5274243397839865157_y%20(1).jpg" alt="Це моє лого" width="400" height="400">
+
+<script>
+// Збільшуємо розмір зображення на 100 пікселів
+function zoomIn() {
+  var img = document.getElementById("myImage");
+  var currWidth = img.clientWidth;
+  var currHeight = img.clientHeight;
+  var ratio = currHeight / currWidth; // визначаємо співвідношення сторін
+  img.style.width = (currWidth + 100) + "px";
+  img.style.height = (currWidth + 100) * ratio + "px"; // змінюємо висоту з урахуванням співвідношення сторін
+}
+
+// Зменшуємо розмір зображення на 100 пікселів
+function zoomOut() {
+  var img = document.getElementById("myImage");
+  var currWidth = img.clientWidth;
+  var currHeight = img.clientHeight;
+  var ratio = currHeight / currWidth; // визначаємо співвідношення сторін
+  img.style.width = (currWidth - 100) + "px";
+  img.style.height = (currWidth - 100) * ratio + "px"; // змінюємо висоту з урахуванням співвідношення сторін
+}
+</script>
+
+    <p>Це текст з <strong>жирним</strong>, <em>курсивом</em> та <u>підкресленням</u>.</p>
+	<p>Мене звуть <strong>Шпеньков Владислав</strong>. Я є студентом першого курсу факультету комп'ютерної інженерії в <u> Національному університеті <<Полтавська політехніка імені Юрія  Кондратюка>></u>. Мої улюблені заняття - це <em>програмування, розробка веб-сайтів та вивчення нових технологій</em>.</p>
+
+	<h1>Моє хобі</h1>
+	<h2>Програмування</h2>
+	<p>Я вивчаю <u>JavaScript</u> та <u>Python</u>. Ось приклад коду на JavaScript:</p>
+	<pre>
+		<code>
+function greet(name) {
+	return "Привіт, " + name + "!";
+}
+
+console.log(greet("Шпеньков")); // Привіт, Владислав!
+		</code>
+	</pre>
+
+	<p>Програмування – це дуже загальне поняття. Тому розповім чим саме, захоплююсь я. Мені подобається кілька напрямків: coding (написання коду), web (верстка сайтів) та omf (відео/фото монтаж).
+Написання коду: мені подобається програмувати сучасною мовою програмування python дуже зручний і гнучкий.
+Мені також подобається верстати сайти, оскільки це більше ухил у творчу сторону і тут немає точних стандартів.</p>
+    <footer>
+	<p align="right">Студент групи 103-ТК: <u>Шпеньков Владислав</u></p>
+</footer>
+    </body>
+</html>
